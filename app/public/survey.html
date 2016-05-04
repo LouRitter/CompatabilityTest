@@ -1,0 +1,191 @@
+
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/superhero/bootstrap.min.css">
+</head>
+<body>
+<h1>Compatability Test</h1>
+<h2>Survey Questions:<h2>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputName" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="name" class="form-control" id="inputName" placeholder="Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputImage" class="col-sm-2 control-label" >Link to Image</label>
+    <div class="col-sm-10">
+      <input type="inputImage" class="form-control" id="inputImage" placeholder="Link to image">
+    </div>
+    <h2 id="instructions"> Choose an answer from 1 (strongly disagree) to 5 (strongly agree):</h2>
+  </div>
+  <div class="questions">
+  	<h3>(1). You're the life of the party</h3>
+		<select class="form-control" id="q1">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+	<h3>(2).You'd rather read a book than watch a movie.</h3>
+		<select class="form-control" id="q2">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+	<h3>(3).You describe yourself as an outgoing person</h3>
+			<select class="form-control" id="q3">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+	<h3>(4).You believe that people are inherently good</h3>
+		<select class="form-control" id="q4">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+  	<h3>(5).You like partying more than having a quiet night in </h3>
+		<select class="form-control" id="q5">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+	<h3>(6).You would rather drive a truck than a sports car.</h3>
+		<select class="form-control" id="q6">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+	<h3>(7). You'd pick a nice steakhouse over a sushi resturant</h3>
+			<select class="form-control" id="q7">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+	<h3>(8). You are a pacifist</h3>
+		<select class="form-control" id="q8">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+	<h3>(9). You have interest in a wide variety of topics</h3>
+		<select class="form-control" id="q9">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>
+	<h3>(10). You would pick a hilarious comedy over a gripping drama</h3>
+		<select class="form-control" id="q10">
+  			<option>1</option>
+ 			 <option>2</option>
+ 			 <option>3</option>
+ 			 <option>4</option>
+ 			 <option>5</option>
+		</select>	
+	</div>
+<div class="modal fade" id="modalBest" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">Matched Friend</h4>
+      </div>
+      		<div class="modal-body">
+      			<h2 class="bestName"></h2>
+				<img class="bestPic">
+			</div>
+       <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+		<button type="button" class="btn btn-lg btn-primary" id="subButton"><span class="glyphicon glyphicon-list-alt"></span> See Results</button></a>
+  <style type="text/css">
+	#inputImage {
+		width:400px;
+		margin-bottom: 40px;
+	}
+	#inputName{
+		width: 200px;
+	}
+	.form-control{
+		width:100px;
+	}
+	.questions{
+		margin-left:50px;
+	}
+	#subButton{
+		margin-left: 100px;
+		margin-top: 20px;
+	}
+	#instructions{
+		margin-top: 40px;
+		margin-left: 150px;
+	}
+  </style>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+		var bestMatch
+
+
+		$("#subButton").on("click", function(){
+		var q1=$('#q1').val();
+		var q2=$('#q2').val();
+		var q3=$('#q3').val();
+		var q4=$('#q4').val();
+		var q5=$('#q5').val();
+		var q6=$('#q6').val();
+		var q7=$('#q7').val();
+		var q8=$('#q8').val();		
+		var q9=$('#q9').val();
+		var q10=$('#q10').val();		
+		q1=parseInt(q1);
+		var newFriend = {
+			name: $('#inputName').val().trim(),
+			photoLink: $('#inputImage').val().trim(),
+			scores: [q1,q2,q3,q4,q5,q6,q7,q8,q9,q10],
+			
+		};
+		console.log(newFriend);
+
+		
+		var currentURL = window.location.origin;
+
+	    $.post(currentURL + "/api/friends", newFriend,
+	    function(data){
+	    	console.log(data);
+	    		$('.bestName').text(data.name);
+	    		$('.bestPic').attr("src", data.photoLink);
+
+	    });
+	    $('#modalBest').modal('toggle');
+
+return false;
+
+});
+</script>
+</html>
