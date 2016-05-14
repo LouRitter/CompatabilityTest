@@ -13,7 +13,7 @@
     "express": "^4.13.4",
     "mysql": "^2.10.2",
     "path": "^0.12.7",
-    "sequelize": "^3.23.0"
+    "sequelize": "^3.23.1"
   },
   "devDependencies": {},
   "description": ""
