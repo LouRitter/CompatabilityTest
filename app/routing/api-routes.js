@@ -27,18 +27,18 @@ module.exports = function(app){
 		friends.sync().then(function () {
 			// Table created
 			return friends.create({
-			name:    newUsr.name,
-			photo:   newUsr.photo,
-			score1:  newUsr.scores[0],
-			score2:  newUsr.scores[1],
-			score3:  newUsr.scores[2],
-			score4:  newUsr.scores[3],
-			score5:  newUsr.scores[4],
-			score6:  newUsr.scores[5],
-			score7:  newUsr.scores[6],
-			score8:  newUsr.scores[7],
-			score9:  newUsr.scores[8],
-			score10: newUsr.scores[9],
+			name:    friend.name,
+			photo:   friend.photo,
+			q1:  friend.scores[0],
+			q2:  friend.scores[1],
+			q3:  friend.scores[2],
+			q4:  friend.scores[3],
+			q5:  friend.scores[4],
+			q6:  friend.scores[5],
+			q7:  friend.scores[6],
+			q8:  friend.scores[7],
+			q9:  friend.scores[8],
+			q10: friend.scores[9],
 			});
 		});
 			

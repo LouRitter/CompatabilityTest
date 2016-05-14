@@ -3,7 +3,7 @@ var Sequelize = require("sequelize");
 var sequelize = require("../config/connection.js"); 
 
 // Creates a "Character" model that matches up with DB
-var friends = sequelize.define("friends", {
+var friends = sequelize.define("users", {
 	id: {
 		type: Sequelize.INTEGER,
 		autoIncrement: true,
@@ -15,34 +15,34 @@ var friends = sequelize.define("friends", {
 	photo: {
 		type: Sequelize.STRING,
 	},
-	score1: {
+	q1: {
 		type: Sequelize.INTEGER,
 	},
-	score2: {
+	q2: {
 		type: Sequelize.INTEGER,
 	},
-	score3: {
+	q3: {
 		type: Sequelize.INTEGER,
 	},
-	score4: {
+	q4: {
 		type: Sequelize.INTEGER,
 	},
-	score5: {
+	q5: {
 		type: Sequelize.INTEGER,
 	},
-	score6: {
+	q6: {
 		type: Sequelize.INTEGER,
 	},
-	score7: {
+	q7: {
 		type: Sequelize.INTEGER,
 	},
-	score8: {
+	q8: {
 		type: Sequelize.INTEGER,
 	},
-	score9: {
+	q9: {
 		type: Sequelize.INTEGER,
 	},
-	score10: {
+	q10: {
 		type: Sequelize.INTEGER,
 	}
 	},
